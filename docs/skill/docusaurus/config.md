@@ -13,21 +13,21 @@ authors: kuizuo
 
 ```javascript title='docusaurus.config.js'
 const config = {
-  title: '愧怍的小站',
+  title: 'Bennett的小站',
   titleDelimiter: '-',
-  url: 'https://kuizuo.cn',
+  url: 'https://bennett.hi-motor.site',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'kuizuo',
   projectName: 'blog',
-  tagline: '记录所学知识，领略编程之美',
+  tagline: '话在言中，意在言外',
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     image: 'img/logo.png',
     metadata: [
       {
         name: 'keywords',
-        content: '愧怍, kuizuo, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
+        content: 'Bennett, kuizuo, blog, javascript, typescript, node, react, vue, web, 前端, 后端',
       },
     ],
     // ...
@@ -51,7 +51,7 @@ module.exports = config
 
 ### 基本信息
 
-站点名和作者名只需要搜索 **愧怍** 便能找到关键位置
+站点名和作者名只需要搜索 **Bennett** 便能找到关键位置
 
 ### 关于我
 
@@ -67,7 +67,7 @@ module.exports = config
 
 ```javascript title='docusaurus.config.js'
 socials: {
-    github: 'https://github.com/kuizuo',
+    github: 'https://github.com/DawnEver',
     twitter: 'https://twitter.com/kuizuo',
     juejin: 'https://juejin.cn/user/1565318510545901',
     csdn: 'https://blog.csdn.net/kuizuo12',

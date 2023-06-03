@@ -5,14 +5,14 @@ const announcementBarContent = ''
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '愧怍的小站',
+  title: 'Bennett的小站',
   titleDelimiter: '-',
-  url: 'https://kuizuo.cn',
+  url: 'https://bennett.hi-motor.site',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'kuizuo',
   projectName: 'blog',
-  tagline: '记录所学知识，领略编程之美',
+  tagline: '话在言中，意在言外',
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     image: 'img/logo.png',
@@ -23,7 +23,7 @@ const config = {
     metadata: [
       {
         name: 'keywords',
-        content: '愧怍',
+        content: 'Bennett',
       },
       {
         name: 'keywords',
@@ -40,9 +40,9 @@ const config = {
       },
     },
     navbar: {
-      title: '愧怍',
+      title: 'Bennett',
       logo: {
-        alt: '愧怍',
+        alt: 'Bennett',
         src: 'img/logo.webp',
         srcDark: 'img/logo.webp',
       },
@@ -153,15 +153,7 @@ const config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/kuizuo',
-            },
-            {
-              label: '掘金',
-              href: 'https://juejin.cn/user/1565318510545901',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/M8cVcjDxkz',
+              href: 'https://github.com/DawnEver',
             },
           ],
         },
@@ -189,7 +181,7 @@ const config = {
           ],
         },
       ],
-      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2020 - PRESENT 愧怍 Built with Docusaurus.</p>`,
+      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -243,12 +235,9 @@ const config = {
       playgroundPosition: 'top',
     },
     socials: {
-      github: 'https://github.com/kuizuo',
-      twitter: 'https://twitter.com/kuizuo',
-      juejin: 'https://juejin.cn/user/1565318510545901',
-      csdn: 'https://blog.csdn.net/kuizuo12',
-      qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=911993023&amp;site=qq',
-      zhihu: 'https://www.zhihu.com/people/kuizuo',
+      github: 'https://github.com/DawnEver',
+      wexin: '17834720317',
+      zhihu: 'https://www.zhihu.com/people/ming-ji-zhao-yang',
       cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
     },
   },
@@ -257,7 +246,7 @@ const config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'Bennett的个人博客',
       },
     },
   ],
@@ -299,9 +288,9 @@ const config = {
         path: 'blog',
         routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/DawnEver/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription: '愧怍的个人博客',
+        blogDescription: 'Bennett的个人博客',
         blogSidebarCount: 10,
         blogSidebarTitle: '最近更新',
         postsPerPage: 10,
@@ -310,8 +299,8 @@ const config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'Bennett',
+          copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       },
     ],

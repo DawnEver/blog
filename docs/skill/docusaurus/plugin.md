@@ -19,7 +19,7 @@ plugins: [
         path: 'blog',
         routeBasePath: '/',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/DawnEver/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogSidebarCount: 10,
         postsPerPage: 10,
@@ -28,8 +28,8 @@ plugins: [
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'Bennett',
+          copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       }
     ],
