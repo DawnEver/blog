@@ -79,24 +79,16 @@ const config = {
           position: 'right',
           items: [
             {
-              label: 'API服务',
-              to: 'https://api.kuizuo.cn',
+              label: 'Hi-Motor Bot',
+              to: 'https://bot.hi-motor.site',
             },
             {
-              label: 'JS代码还原',
-              to: 'https://js-de-obfuscator.kuizuo.cn',
+              label: 'ChatGPT',
+              to: 'https://chat.hi-motor.site',
             },
             {
-              label: 'CyberChef加密',
-              to: 'https://cipher.kuizuo.cn',
-            },
-            {
-              label: 'Transform',
-              to: 'https://transform.kuizuo.cn',
-            },
-            {
-              label: '网盘',
-              to: 'https://pan.kuizuo.cn',
+              label: 'Team Gitea',
+              to: 'https://gitea.hi-motor.site',
             },
           ],
         },
@@ -137,10 +129,6 @@ const config = {
             {
               label: '实战项目',
               to: 'project',
-            },
-            {
-              label: '前端示例',
-              to: 'https://example.kuizuo.cn',
             },
           ],
         },
