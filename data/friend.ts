@@ -1,7 +1,13 @@
 export const Friends: Friend[] = [
   {
-    title: '卢仙',
-    description: 'Shuyu Lu@Huazhong University of Science and Technology',
+    title: 'Bennett',
+    description: '我',
+    website: 'https://bennett.hi-motor.site/',
+    avatar: '/img/favicon.ico',
+  },  
+  {
+    title: 'Lu Shuyu',
+    description: '卢仙',
     website: 'https://lushuyu.site/',
     avatar: 'https://lushuyu.site/resource/icon.jpg',
   },  

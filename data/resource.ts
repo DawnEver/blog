@@ -25,7 +25,7 @@ const friends: Resource[] = Friends.map(f => {
 
 export const resourceData: ResourceCategory[] = [
   {
-    name: '友链👨‍💻',
+    name: '友链',
     resources: friends,
   },
   ]
