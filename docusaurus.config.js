@@ -60,10 +60,6 @@ const config = {
               label: '归档',
               to: 'archive',
             },
-            {
-              label: '笔记',
-              to: 'docs/skill/',
-            },
           ],
         },
         {
@@ -115,10 +111,6 @@ const config = {
               to: 'archive',
             },
             {
-              label: '笔记',
-              to: 'docs/skill',
-            },
-            {
               label: '项目',
               to: 'project',
             },
@@ -150,13 +142,7 @@ const config = {
               position: 'right',
               to: 'friends',
             },
-            
-            // {
-            //   label: '我的站点',
-            //   position: 'right',
-            //   to: 'website',
-            // },
-            {
+             {
               html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`,
             },
           ],
