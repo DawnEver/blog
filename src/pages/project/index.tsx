@@ -17,10 +17,11 @@ const TITLE = translate({
 })
 const DESCRIPTION = translate({
   id: 'theme.project.description',
-  message: '以下项目均由本人开发，均可自由使用，部分开源。',
+  message: '本人独立开发以及参与开发的项目',
 })
 
 const GITHUB_URL = 'https://github.com/DawnEver'
+const GITEA_URL = 'https://gitea.hi-motor.site'
 
 type ProjectState = {
   scrollTopPosition: number
@@ -55,8 +56,19 @@ function ShowcaseHeader() {
         target="_blank"
         rel="noreferrer"
       >
-        <Translate id="showcase.header.button">
-          🥰 前往 Github 克隆项目
+        <Translate id="showcase.header.button_github">
+          前往 Github 克隆项目
+        </Translate>
+      </a>
+      <span>    </span>
+      <a
+        className="button button--primary"
+        href={GITEA_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Translate id="showcase.header.button_gitea">
+          前往团队 Gitea 下载项目
         </Translate>
       </a>
     </section>

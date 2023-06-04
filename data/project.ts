@@ -1,19 +1,50 @@
 export const projects: Project[] = [
   {
     title: 'Bennett的小站',
-    description: '🦖 基于 Docusaurus 静态网站生成器实现个人博客',
-    preview: '/img/project/blog.png',
+    description: '魔改自愧怍的个人博客（https://kuizuo.cn）',
+    // preview: '/img/project/blog.png',
     website: 'https://bennett.hi-motor.site',
     source: 'https://github.com/DawnEver/blog',
     tags: ['opensource', 'design', 'favorite'],
-    type: 'web',
+    type: 'personal',
   },
   {
-    title: 'rust-wasm-md5',
-    description: '🦀 Rust + WebAssembly 实现的 MD5 加密',
-    website: 'https://github.com/DawnEver/rust-wasm-md5',
+    title: 'No Hand',
+    description: 'pyqt5 实现的随机数点名器',
+    preview: '/img/project/personal/no_hand.jpg',
+    website: 'https://github.com/DawnEver/NoHand',
     tags: ['opensource'],
     type: 'personal',
+  },
+  {
+    title: 'Desktop Here',
+    description: '让桌面显示任意一个文件夹',
+    website: 'https://github.com/DawnEver/DesktopHere',
+    tags: ['opensource'],
+    type: 'personal',
+  },
+  {
+    title: 'Mac Scripts',
+    description: 'MacOS 的一些常用脚本',
+    website: 'https://github.com/DawnEver/MacScrips',
+    tags: ['opensource'],
+    type: 'personal',
+  },
+
+
+  {
+    title: 'Hi-Motor Designer',
+    description: '同步磁阻电机设计优化平台',
+    website: 'https://designer.hi-motor.site',
+    tags: ['favorite','product','large','team'],
+    type: 'product',
+  },
+  {
+    title: 'Hi-Motor Hub',
+    description: '高效电机选型设计平台',
+    website: 'https://designer.hi-motor.site',
+    tags: ['product','team'],
+    type: 'product',
   },
 ]
 
@@ -30,8 +61,9 @@ export type TagType =
   | 'design'
   | 'large'
   | 'personal'
+  | 'team'
 
-export type ProjectType = 'personal' | 'web' | 'app' | 'toy' | 'other'
+export type ProjectType = 'personal' | 'product' | 'toy' | 'other'
 
 export type Project = {
   title: string
@@ -46,12 +78,12 @@ export type Project = {
 export const Tags: Record<TagType, Tag> = {
   favorite: {
     label: '喜爱',
-    description: '我最喜欢的网站，一定要去看看!',
+    description: '情有所钟！',
     color: '#e9669e',
   },
   opensource: {
     label: '开源',
-    description: '开源项目可以提供灵感!',
+    description: '开源项目！',
     color: '#39ca30',
   },
   product: {
@@ -61,18 +93,23 @@ export const Tags: Record<TagType, Tag> = {
   },
   design: {
     label: '设计',
-    description: '设计漂亮的网站!',
+    description: '优秀的设计!',
     color: '#a44fb7',
   },
   large: {
     label: '大型',
-    description: '大型项目，原多于平均数的页面',
+    description: '大型项目',
     color: '#8c2f00',
   },
   personal: {
     label: '个人',
     description: '个人项目',
     color: '#12affa',
+  },
+  team: {
+    label: '团队',
+    description: '团队项目',
+    color: '#edaffa',
   },
 }
 

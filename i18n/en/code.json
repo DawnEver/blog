@@ -42,8 +42,11 @@
   "theme.project.description": {
     "message": "The following projects are developed by me, freely, partially open source."
   },
-  "showcase.header.button": {
+  "showcase.header.button_github": {
     "message": "🥰 Go to Github to clone"
+  },
+  "showcase.header.button_gitea": {
+    "message": "Go to Team Gitea to clone"
   },
   "playground.codesandbox.description": {
     "message": "CodeSandbox is a popular playground solution. Runs Docusaurus in a remote Docker container."

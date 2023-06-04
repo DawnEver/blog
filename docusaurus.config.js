@@ -1,5 +1,5 @@
 const path = require('path')
-const beian = '闽ICP备2020017848号-2'
+// const beian = '闽ICP备2020017848号-2'
 
 const announcementBarContent = ''
 
@@ -63,14 +63,6 @@ const config = {
             {
               label: '笔记',
               to: 'docs/skill/',
-            },
-            {
-              label: '工具推荐',
-              to: 'docs/tools/',
-            },
-            {
-              label: '前端示例',
-              to: 'https://example.kuizuo.cn',
             },
           ],
         },
@@ -169,7 +161,8 @@ const config = {
           ],
         },
       ],
-      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
+      // copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
+      copyright: `<p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -288,7 +281,9 @@ const config = {
         feedOptions: {
           type: 'all',
           title: 'Bennett',
-          copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          // copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.`,
+
         },
       },
     ],
