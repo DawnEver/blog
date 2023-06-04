@@ -49,7 +49,7 @@ const config = {
       hideOnScroll: true,
       items: [
         {
-          label: '学习',
+          label: '博客',
           position: 'right',
           items: [
             {
@@ -60,6 +60,10 @@ const config = {
               label: '归档',
               to: 'archive',
             },
+            // {
+            //   label: '分类',
+            //   to: 'category',
+            // },
           ],
         },
         {
@@ -100,7 +104,7 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: '学习',
+          title: '博客',
           items: [
             {
               label: '标签',
@@ -110,10 +114,10 @@ const config = {
               label: '归档',
               to: 'archive',
             },
-            {
-              label: '项目',
-              to: 'project',
-            },
+            // {
+            //   label: '分类',
+            //   to: 'category',
+            // },
           ],
         },
         {
@@ -127,11 +131,19 @@ const config = {
               label: 'GitHub',
               href: 'https://github.com/DawnEver',
             },
+            {
+              label: 'Zhihu',
+              href: 'https://www.zhihu.com/people/ming-ji-zhao-yang',
+            },
           ],
         },
         {
           title: '更多',
           items: [
+            {
+              label: '项目',
+              to: 'project',
+            },
             {
               label: '导航',
               position: 'right',
