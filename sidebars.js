@@ -13,21 +13,7 @@ const sidebars = {
         'skill/docusaurus/docusaurus-config',
       ],
     },
-    {
-      label: '代码规范',
-      type: 'category',
-      link: {
-        type: 'doc',
-        id: 'skill/code-specification/code-specification-guides'
-      },
-      items: [
-        'skill/code-specification/eslint',
-      ],
-    },
   ],
-  tools: [
-    'tools/introduction',
-  ]
 }
 
 module.exports = sidebars
