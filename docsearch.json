@@ -1,5 +1,5 @@
 {
-  "index_name": "kuizuo",
+  "index_name": "bennett",
   "start_urls": ["https://bennett.hi-motor.site/"],
   "sitemap_urls": ["https://bennett.hi-motor.site/sitemap.xml"],
   "selectors": {

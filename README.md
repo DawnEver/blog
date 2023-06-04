@@ -3,7 +3,7 @@ Bennett的个人博客
 </h2><br>
 
 
-魔改自[愧怍的个人博客](https://github.com/kuizuo/blog)
+魔改自[愧怍的个人博客](https://github.com/bennett/blog)
 
 ## 📊 Catalogue
 

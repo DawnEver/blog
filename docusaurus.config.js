@@ -10,7 +10,7 @@ const config = {
   url: 'https://bennett.hi-motor.site',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
+  organizationName: 'bennett',
   projectName: 'blog',
   tagline: '是如盛夏一般热烈的火焰，燃起了蒲公英的花海……',
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -27,11 +27,11 @@ const config = {
       },
       {
         name: 'keywords',
-        content: 'blog, javascript, typescript, node, react, vue, web',
+        content: 'blog',
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者, 写过爬虫, 学过逆向，现在主攻ts全栈',
+        content: '博客',
       },
     ],
     docs: {
@@ -189,7 +189,7 @@ const config = {
     algolia: {
       appId: 'GV6YN1ODMO',
       apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
+      indexName: 'bennett',
     },
     zoom: {
       selector: '.markdown :not(em) > img',
@@ -200,13 +200,13 @@ const config = {
       config: {},
     },
     matomo: {
-      matomoUrl: 'https://matomo.kuizuo.cn/',
+      matomoUrl: 'https://matomo.bennett.cn/',
       siteId: '1',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
     },
     giscus: {
-      repo: 'kuizuo/blog',
+      repo: 'bennett/blog',
       repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
       category: 'General',
       categoryId: 'DIC_kwDOF7NJDM4CPK95',

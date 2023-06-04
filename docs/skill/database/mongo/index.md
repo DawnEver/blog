@@ -197,12 +197,6 @@ db.order.aggregate([
 
 ### 连接
 
-```js
-const mongoose = require('mongoose');
-let url = 'mongodb://localhost:27017/kuizuo';
-mongoose.connect(url, { useNewUrlParser: true }, function (err) {});
-```
-
 ### 定义 Schema
 
 ```js
@@ -236,23 +230,7 @@ let UserSchema = mongoose.Schema({
 
 ### 定义模型
 
-```js
-// let User = mongoose.model('User', UserSchema) // 首字母大写  默认users表
-let User = mongoose.model('User', UserSchema, 'user'); // 指定user表
 
-User.find({}, (err, doc) => {
-  console.log(doc);
-});
-
-// 增加数据
-// 实例化对象
-let user = new User({
-  username: 'kuizuo',
-  password: 'a12345678',
-});
-
-user.save();
-```
 
 ### 自定义封装方法(一般很少使用)
 
