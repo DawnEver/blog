@@ -12,7 +12,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'kuizuo',
   projectName: 'blog',
-  tagline: '话在言中，意在言外',
+  tagline: '是如盛夏一般热烈的火焰，燃起了蒲公英的花海……',
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     image: 'img/logo.png',
@@ -115,11 +115,11 @@ const config = {
               to: 'archive',
             },
             {
-              label: '技术笔记',
+              label: '笔记',
               to: 'docs/skill',
             },
             {
-              label: '实战项目',
+              label: '项目',
               to: 'project',
             },
           ],
@@ -141,15 +141,16 @@ const config = {
           title: '更多',
           items: [
             {
-              label: '友链',
-              position: 'right',
-              to: 'friends',
-            },
-            {
               label: '导航',
               position: 'right',
               to: 'resource',
             },
+            {
+              label: '友链',
+              position: 'right',
+              to: 'friends',
+            },
+            
             // {
             //   label: '我的站点',
             //   position: 'right',
@@ -159,7 +160,7 @@ const config = {
               html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/img/buildwith.png" /><a/>`,
             },
           ],
-        },
+        },  
       ],
       // copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
       copyright: `<p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
