@@ -8,12 +8,8 @@
     "description": "hero name"
   },
   "homepage.hero.text": {
-    "message": "Here I will share the problems and solutions encountered by various technology stacks, take you to understand the latest technology stacks and how to apply them in actual development, and hope that my development experience will inspire you",
+    "message": "Welcome to my Mind Palace",
     "description": "hero text"
-  },
-  "homepage.hero.look": {
-    "message": "You can take a look at it casually and check {note}, {project}, {link}. I will also share {idea} for programming learning",
-    "description": "hero need"
   },
   "hompage.hero.note": {
     "message": "Note"

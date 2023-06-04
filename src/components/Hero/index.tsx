@@ -9,7 +9,7 @@ import Link from '@docusaurus/Link'
 
 import HeroMain from './img/hero_main.svg'
 
-import JuejinIcon from '@site/static/svg/juejin.svg'
+
 import { Icon } from '@iconify/react'
 
 import styles from './styles.module.scss'
@@ -36,37 +36,9 @@ function Hero() {
         </animated.div>
         <animated.p style={trails[1]}>
           <Translate id="homepage.hero.text">
-            {`在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。`}
+            {`欢迎来到我的思想自留地。`}
           </Translate>
-          <br />
-          <br />
-          <Translate
-            id="homepage.hero.look"
-            values={{
-              note: (
-                <Link to="/docs/skill">
-                  <Translate id="hompage.hero.note">技术笔记</Translate>
-                </Link>
-              ),
-              project: (
-                <Link to="/project">
-                  <Translate id="hompage.hero.project">实战项目</Translate>
-                </Link>
-              ),
-              link: (
-                <Link to="/resource">
-                  <Translate id="hompage.hero.link">资源导航</Translate>
-                </Link>
-              ),
-              idea: (
-                <Link to="/tags/随笔">
-                  <Translate id="hompage.hero.idea">想法感悟</Translate>
-                </Link>
-              ),
-            }}
-          >
-            {`你可以随处逛逛，查看{note}、{project}、{link}、以及我的{idea}。`}
-          </Translate>
+
         </animated.p>
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
@@ -75,9 +47,9 @@ function Hero() {
           </a>
         </animated.div>
       </div>
-      <div className={styles.bloghome__image}>
+      {/* <div className={styles.bloghome__image}>
         <HeroMain />
-      </div>
+      </div> */}
     </animated.div>
   )
 }
@@ -104,18 +76,20 @@ export function SocialLinks({ ...prop }) {
       <a href={socials.github} target="_blank">
         <Icon icon="ri:github-line" />
       </a>
-      <a href={socials.juejin} target="_blank">
-        <JuejinIcon />
-      </a>
-      <a href={socials.qq} target="_blank">
-        <Icon icon="ri:qq-line" />
-      </a>
-      <a href={socials.twitter} target="_blank">
-        <Icon icon="ri:twitter-line" />
-      </a>
       <a href={socials.zhihu} target="_blank">
         <Icon icon="ri:zhihu-line" />
       </a>
+      <a href="/img/qrcode/wechat.jpeg">
+        <Icon icon="ri:wechat-line" target="_blank" />
+      </a>
+      <a href="/img/qrcode/qq.png">
+        <Icon icon="ri:qq-line" target="_blank"/>
+      </a>
+      <a href="mailto:mingyangbao@hust.edu.cn">
+        <Icon icon="ri:mail-open-line" target="_blank" />
+      </a>
+
+
     </animated.div>
   )
 }

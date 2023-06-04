@@ -220,7 +220,6 @@ const config = {
       github: 'https://github.com/DawnEver',
       wexin: '17834720317',
       zhihu: 'https://www.zhihu.com/people/ming-ji-zhao-yang',
-      cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
     },
   },
   headTags: [
