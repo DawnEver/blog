@@ -19,9 +19,9 @@
     "message": "小工具",
     "description": "Navbar item with label 小工具"
   },
-  "item.label.实战项目": {
-    "message": "实战项目",
-    "description": "Navbar item with label 实战项目"
+  "item.label.项目": {
+    "message": "项目",
+    "description": "Navbar item with label 项目"
   },
   "item.label.技术笔记": {
     "message": "技术笔记",

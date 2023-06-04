@@ -21,9 +21,9 @@
   },
 
 
-  "link.item.label.实战项目": {
+  "link.item.label.项目": {
     "message": "Projects",
-    "description": "The label of footer link with label=实战项目 linking to project"
+    "description": "The label of footer link with label=项目 linking to project"
   },
   "link.item.label.关于我": {
     "message": "About Me",

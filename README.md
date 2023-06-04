@@ -26,7 +26,6 @@ Bennett的个人博客
 ├── static                         # 静态资源文件
 │   └── img                        # 静态图片
 ├── docusaurus.config.js           # 站点的配置信息
-├── sidebars.js                    # 文档的侧边栏
 ├── package.json
 ├── tsconfig.json
 └── yarn.lock

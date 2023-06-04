@@ -34,11 +34,6 @@ const config = {
         content: '博客',
       },
     ],
-    docs: {
-      sidebar: {
-        hideable: true,
-      },
-    },
     navbar: {
       title: 'Bennett',
       logo: {
@@ -234,10 +229,6 @@ const config = {
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          path: 'docs',
-          sidebarPath: 'sidebars.js',
-        },
         blog: false,
         theme: {
           customCss: [require.resolve('./src/css/custom.scss')],

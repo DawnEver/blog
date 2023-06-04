@@ -13,6 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { Fade } from 'react-awesome-reveal'
 import { projects } from '@site/data/project'
+import Translate from '@docusaurus/Translate'
 
 type Count = {
   blog: number
@@ -122,7 +123,9 @@ export default function BlogInfo() {
             <div className="row bloginfo__card">
               <div style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <Icon icon="ri:price-tag-3-line" width="20" height="20" />
-                <span className="margin-horiz--sm">标签</span>
+                <span className="margin-horiz--sm">
+                  <Translate id="link.item.label.标签">标签</Translate>
+                  </span>
               </div>
               <TagsSection data={Object.values(tagData)} />
             </div>
