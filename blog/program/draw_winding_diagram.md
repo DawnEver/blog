@@ -8,7 +8,7 @@ keywords: [python, motor-design, winding]
 description: 使用 Python 开发的绕组连接图绘制模块
 # image: /img/project/kz-admin.png
 ---
-# 如何用Python绘制绕组连接图-上
+<!-- truncate -->
 
 ## 电光火石
 今天（5月6号）电机学课上，老师正在讲交流电机绕组。
@@ -22,7 +22,7 @@ description: 使用 Python 开发的绕组连接图绘制模块
 ## 前情提要
 在商业电机设计软件中，绕组分析模块绕组链接图效果是这样的。
 
-<img src=‘./draw_winding_diagram/maxwellWinding.png'，width=200>
+![maxwellWinding](./draw_winding_diagram/maxwellWinding.png)
 
 笔者此前的绕组绘制模块主要参考了 [陈嘉豪](https://github.com/horychen) 在 [ACMOP](https://github.com/horychen/ACMOP) 中的绕组分析部分。
 
@@ -34,7 +34,7 @@ ACMOP（Alternating Current Machine Optimization Project），是一个比较完
 
 2.ACMOP 在一些细节上存在问题，如绘制单层绕组（下图）。
 
-<img src=‘./draw_winding_diagram/ErrorDiagram.png'，width=200>
+![ErrorDiagram](./draw_winding_diagram/ErrorDiagram.png)
 
 3.作为一个有追求的 Coder，笔者觉得 ACMOP 这一部分的代码逻辑走了一些弯路。陷入很多不必要的分类讨论和判断。尤其是画布边缘的端部绕组连接，这一部分在下面介绍笔者的思路时候会详细阐述。
 
@@ -94,7 +94,7 @@ class winding(object):
 考虑到单匝线圈感应出的电动势明显小于多匝线圈，且实际应用中多匝线圈的电机使用更多，~~为了省事~~，笔者在程序中虽然考虑了线圈匝数但是，基本上按照多匝线圈的画法去绘制。
 
 
-<img src=‘./draw_winding_diagram/单匝线圈.png'>
+![单匝线圈](./draw_winding_diagram/单匝线圈.png)
 
 ```python
 def drawVerticalLine(self,x,phase,layer):
@@ -102,7 +102,7 @@ def drawVerticalLine(self,x,phase,layer):
         画绕组连接图有效部分:画一条垂直线
         """
         color=self.colorMap[phase]
-        linestyle=['-','--'][layer] # 第一层为实线，第二层为虚线
+        linestyle=[‘-‘,‘--‘][layer] # 第一层为实线，第二层为虚线
         plt.plot([x,x],[self.h1,self.h3],color=color,linestyle=linestyle)
     
     def drawFoldingLineUpper(self,x1,x2,phase,layer):
@@ -111,9 +111,9 @@ def drawVerticalLine(self,x,phase,layer):
         """
         color=self.colorMap[phase]
         xmid=(x1+x2)/2
-        linestyle='-'
+        linestyle=‘-‘
         plt.plot([x1,xmid],[self.h3,self.h4],color=color,linestyle=linestyle)   # 左侧边
-        linestyle=['-','--'][layer] # 第一层为实线，第二层为虚线
+        linestyle=[‘-‘,‘--‘][layer] # 第一层为实线，第二层为虚线
         plt.plot([xmid,x2],[self.h4,self.h3],color=color,linestyle=linestyle)   # 右侧边
         
     def drawFoldingLineLower(self,x1,x2,phase,layer):
@@ -122,9 +122,9 @@ def drawVerticalLine(self,x,phase,layer):
         """
         color=self.colorMap[phase]
         xmid=(x1+x2)/2
-        linestyle='-'
+        linestyle=‘-‘
         plt.plot([x1,xmid],[self.h1,self.h0],color=color,linestyle=linestyle)   # 左侧边
-        linestyle=['-','--'][layer] # 第一层为实线，第二层为虚线
+        linestyle=[‘-‘,‘--‘][layer] # 第一层为实线，第二层为虚线
         plt.plot([xmid,x2],[self.h0,self.h1],color=color,linestyle=linestyle)   # 右侧边
 ```
 一些纯粹的工具函数，一个函数只干一件事与可复用性结合。
@@ -146,11 +146,11 @@ def draw(self):
                     x1=i
                     self.drawVerticalLine(x=x1,phase=phase,layer=0)
                     
-                    plt.text(x1,hText1,f"{int(x1+1)}",horizontalalignment = 'center', bbox=dict(fc='white',lw=0,alpha=0.9))
+                    plt.text(x1,hText1,f"{int(x1+1)}",horizontalalignment = ‘center‘, bbox=dict(fc=‘white‘,lw=0,alpha=0.9))
 
                     x2=i+self.tou
                     self.drawVerticalLine(x=x2,phase=phase,layer=0)
-                    text=plt.text(x2,hText2,f"{int(x2+1)}",horizontalalignment = 'center', bbox=dict(fc='white',lw=0,alpha=0.9))
+                    text=plt.text(x2,hText2,f"{int(x2+1)}",horizontalalignment = ‘center‘, bbox=dict(fc=‘white‘,lw=0,alpha=0.9))
 
                     if self.drawAllPhase or self.drawAllPhase+phase==0:
                         self.drawFoldingLineUpper(x1,x2,phase,layer=0)
@@ -163,7 +163,7 @@ def draw(self):
                         
                         self.drawVerticalLine(x=x1,phase=phase,layer=0)
                         self.drawVerticalLine(x=x2,phase=phase,layer=0)
-                        plt.text(x2,hText2,f"{int(x2+1)}",horizontalalignment = 'center', bbox=dict(fc='white',lw=0,alpha=0.9))
+                        plt.text(x2,hText2,f"{int(x2+1)}",horizontalalignment = ‘center‘, bbox=dict(fc=‘white‘,lw=0,alpha=0.9))
                 
                         if self.drawAllPhase or self.drawAllPhase+phase==0:
                             self.drawFoldingLineUpper(x1,x2,phase,layer=0)
@@ -174,7 +174,7 @@ def draw(self):
                 hText=self.h2-self.deltaH/4+i%2*self.deltaH/2
                 x1=i-self.layerBias
                 self.drawVerticalLine(x=x1,phase=phase,layer=0)
-                plt.text(x1,hText,f"{int(i+1)}",horizontalalignment = 'center', bbox=dict(fc='white',lw=0,alpha=0.9))
+                plt.text(x1,hText,f"{int(i+1)}",horizontalalignment = ‘center‘, bbox=dict(fc=‘white‘,lw=0,alpha=0.9))
 
                 x2=i+self.y1+self.layerBias
                 self.drawVerticalLine(x=x2,phase=phase,layer=1)
@@ -194,16 +194,16 @@ def draw(self):
                 print("不支持更多绕组层数")
                 break
         
-        plt.axis ('off') 
+        plt.axis (‘off‘) 
         plt.xlim(-0.5,self.Z-0.5)
         plt.show()
-        plt.savefig(‘./draw_winding_diagram/WindingDiagram.png',bbox_inches='tight')
+        plt.savefig(‘./draw_winding_diagram/WindingDiagram.png‘,bbox_inches=‘tight‘)
 ```
 1.实际中，绕组是循环绕制在圆柱形的电机中。于是就像一个行列式，当绕组线圈向右超出画布，自动在画布左侧延伸出来。
 
 这一个朴素的想法就免去了很多分类讨论。
 
-2.通过`plt.axis ('off') `和`plt.xlim(-0.5,self.Z-0.5)`隐藏坐标系并将0-Z的区域显示出来。即可成功在画布上保留所需的部分。
+2.通过`plt.axis (‘off‘) `和`plt.xlim(-0.5,self.Z-0.5)`隐藏坐标系并将0-Z的区域显示出来。即可成功在画布上保留所需的部分。
 
 3.注意一下前文的 self.colorMap，我没有用一个字典，而是一个数组，也是别有用心。
 
@@ -244,15 +244,15 @@ if __name__=="__main__":
 
 36槽4极单层绕组
 
-<img src=‘./draw_winding_diagram/s36p4n1.png'，width=200>
+![s36p4n1](./draw_winding_diagram/s36p4n1.png)
 
 36槽4极整距双层绕组
 
-<img src=‘./draw_winding_diagram/s36p4n2y9.png'，width=200>
+![s36p4n2y9](./draw_winding_diagram/s36p4n2y9.png)
 
 36槽4极短距（节距为7）双层绕组（只绘制A相）
 
-<img src=‘./draw_winding_diagram/s36p4n2y7.png'，width=200>
+![s54p4n2y7](./draw_winding_diagram/s54p4n2y7.png)
 
 ---
 线圈间连接和串并联支路等内容
