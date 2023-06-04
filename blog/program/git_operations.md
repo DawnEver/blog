@@ -8,7 +8,9 @@ keywords: [shell, git]
 description: 一些git基本操作
 # image: /img/project/kz-admin.png
 ---
-# Git基本操作
+
+<!-- truncate -->
+
 
 ## 开始
 这里并不是一个严谨全面的git教程，只是一些经验分享。
