@@ -3,7 +3,7 @@ export const Friends: Friend[] = [
     title: 'Bennett',
     description: '我',
     website: 'https://bennett.hi-motor.site/',
-    avatar: '/img/favicon.ico',
+    avatar: '/img/icons/icon-color.svg',
   },  
   {
     title: 'Lu Shuyu',
