@@ -1,6 +1,6 @@
 ---
 slug: desktop-here
-title: 让任何一个文件夹成为桌面
+title: 如何让桌面映射到任何一个文件夹
 date: 2023-02-24
 authors: bennett
 tags: [program, mac, shell]
