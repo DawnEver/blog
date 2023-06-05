@@ -1,6 +1,6 @@
 ---
 slug: Git_operations
-title: Git基操
+title: Git基本操作
 date: 2023-05-07
 authors: bennett
 tags: [program, shell]
