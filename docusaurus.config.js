@@ -229,8 +229,9 @@ const config = {
     [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         blog: false,
+        docs: {},
         theme: {
           customCss: [require.resolve('./src/css/custom.scss')],
         },
@@ -243,7 +244,7 @@ const config = {
           anonymizeIP: true,
         },
         // debug: true,
-      }),
+      },
     ],
   ],
   // themes: ['@docusaurus/theme-live-codeblock'],
