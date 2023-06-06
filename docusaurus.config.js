@@ -200,10 +200,10 @@ const config = {
       jsLoader: 'matomo.js',
     },
     giscus: {
-      repo: 'bennett/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'DawnEver/dawnever',
+      repoId: 'R_kgDOIx1BuQ=',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDOIx1Buc4CXAlR',
       theme: 'light',
       darkTheme: 'dark',
     },
