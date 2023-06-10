@@ -31,3 +31,13 @@ jobs:
           BRANCH: blog
           FOLDER: build
           #注意这里的 public 是仓库根目录下的 public，也就是 npm run build 生成静态资源的路径，比如有的人是 `docs/.vuepress/dist`
+      
+      # # 利用action把build好的文件上传到服务器/var/www/react-app路径下,需要确认此目录已在服务端创建
+      # - name: deploy file to server
+      #   uses: wlixcc/SFTP-Deploy-Action@v1.0 
+      #   with:  
+      #     username: 'root'   #ssh user name
+      #     server: '${{ secrets.SERVER_IP }}' #引用之前创建好的secret
+      #     ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} #引用之前创建好的secret
+      #     local_path: './build/*'  # 对应我们项目build的文件夹路径
+      #     remote_path: '/var/www/react-app'
