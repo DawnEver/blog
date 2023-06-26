@@ -7,7 +7,7 @@ const announcementBarContent = ''
 const config = {
   title: 'Bennett的小站',
   titleDelimiter: '-',
-  url: 'https://bennett.hi-motor.site',
+  url: 'https://bmy.asia',
   baseUrl: '/',
   // favicon: 'img/favicon.ico',
   favicon: 'img/icon/icon-color.svg',

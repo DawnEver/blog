@@ -1,9 +1,9 @@
 export const projects: Project[] = [
   {
     title: 'Bennett的小站',
-    description: '魔改自愧怍的个人博客（https://bennett.cn）',
+    description: '魔改自愧怍的个人博客（https://kuizuo.cn）',
     // preview: '/img/project/blog.png',
-    website: 'https://bennett.hi-motor.site',
+    website: 'https://bmy.asia',
     source: 'https://github.com/DawnEver/blog',
     tags: ['opensource', 'design', 'favorite'],
     type: 'personal',
