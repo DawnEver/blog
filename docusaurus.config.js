@@ -253,7 +253,8 @@ const config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
-    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
+    path.resolve(__dirname, './src/plugin/plugin-baidu-push'), 
+    path.resolve(__dirname, './src/plugin/plugin-dynamic-title'), 
     [
       path.resolve(__dirname, './src/plugin/plugin-content-blog'),
       {
