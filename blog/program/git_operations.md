@@ -110,3 +110,33 @@ git config --global http.sslVerify false
 参考阅读
 [CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
 
+
+### 切换远程仓库
+方法1.修改命令
+
+`git remote set-url origin <url>`
+
+方法2.先删后加
+
+```git remote rm origin
+git remote add origin [url]```
+
+方法3.直接修改config文件
+
+```
+#.git/config
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "origin"]
+	url = https://github.com/ZhangDi-d/SpringBootSample.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+```
+
+原文链接：https://blog.csdn.net/ShelleyLittlehero/article/details/95980669
