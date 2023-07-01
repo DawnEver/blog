@@ -118,8 +118,10 @@ git config --global http.sslVerify false
 
 方法2.先删后加
 
-```git remote rm origin
-git remote add origin [url]```
+```
+git remote rm origin
+git remote add origin [url]
+```
 
 方法3.直接修改config文件
 
@@ -140,3 +142,8 @@ git remote add origin [url]```
 ```
 
 原文链接：https://blog.csdn.net/ShelleyLittlehero/article/details/95980669
+
+**注意** 
+
+如果有多个仓库，需要通过对每个仓库分别设置上游仓库
+`git branch --set-upstream-to=origin/repo_name repo_name`
