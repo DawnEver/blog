@@ -145,5 +145,5 @@ git remote add origin [url]
 
 **注意** 
 
-如果有多个仓库，需要通过对每个仓库分别设置上游仓库
-`git branch --set-upstream-to=origin/repo_name repo_name`
+如果有多个分支，需要通过对每个分支分别设置上游分支
+`git branch --set-upstream-to=origin/branch_name branch_name`
