@@ -20,10 +20,9 @@ Bosch实习时，收到一条来自 Mentor 的支线任务————爬取新�
 
 接下来是打开浏览器，找到[新浪汽车销量排行榜](https://auto.sina.com.cn/zhishu/#sr_0)。
 
-
 ![webPage](./crawl_auto_sina_sales/webPage.png)
 
-虽然我惯用的是 Chrome ，但是不得不说，除去Google帐户和扩展商店，Firefox的功能和体验并不输于Chrome。
+虽然我惯用的是 Chrome ，但是不得不说，除去Google帐户和扩展商店，Firefox 和 Edge 的功能和体验并不输于Chrome。
 
 ## 分析
 
@@ -46,9 +45,11 @@ Bosch实习时，收到一条来自 Mentor 的支线任务————爬取新�
 
 `price.auto.sina.com.cn/api/PaihangbangSales/getSubSalesByParams?size=20&page=2&year=&month=&carGuidePrice=&serialJiBie=&corpType=&ranliaoXingshi=&serial_id=&need_detail=1`
 
-参数直接就是明文？无需coockie？
+参数直接就是明文？无需coockie？甚至连伪装 Agent 都不需要？
 
-OK，都不用上什么 scrapy、selenium了，直接 requests 手搓个简单的爬虫就解决问题了。
+OK，都不用上什么 scrapy、selenium了，直接用 requests 库就解决问题了。
+
+值得一提的是，在历史数据归档时，我们必须要找到一个可供索引的参数，所幸，我发现了一个参数 `sub_brand_id`,每一个车型都拥有相同的`sub_brand_id`。如特斯拉 ModelY 车型的 sub_brand_id 值就是 4281。
 
 ## 画风突转-1
 
@@ -82,27 +83,36 @@ OK，都不用上什么 scrapy、selenium了，直接 requests 手搓个简单�
 大概是前期大量下载数据触发到反爬程序了吧。
 
 ## 继续战斗！
-本来故事到这里就告一段落了，但是我发现，在db.auto.sina.com.cn/<sub_brand_id>/`和`db.auto.sina.com.cn/<sub_brand_id>/peizhi`下，还有更详细的汽车信息。
+本来故事到这里就告一段落了，但是我发现，在 `db.auto.sina.com.cn/<sub_brand_id>/`和`db.auto.sina.com.cn/<sub_brand_id>/peizhi`下，还有更详细的汽车信息。
 
 
 瞬间，战斗的欲望又燃烧起来了。
 
-这个过程式枯燥而复杂的，我一度想要放弃，考虑把网页整个爬取下来再用Beautiful Soup之类的 HTML 库解析。
+这个过程式枯燥而复杂的，我一度想要放弃，考虑把网页整个爬取下来再用 *Beautiful Soup* 之类的 HTML 库解析。
 
-但是在犹豫之际，我坚持了一会，终于，我找到了想要的数据包和请求。
+但是在犹豫之际，我坚持了一会.
+
+终于，我找到了想要的数据包和请求。
 
 ![catch1](./crawl_auto_sina_sales/catch1.png)
 
+话不多说，亮一下请求头。
+
 ![requestHeaders1](./crawl_auto_sina_sales/requestHeaders1.png)
 
-其中，`carIds`参数可以很轻松的在页面中找到，在此不再赘述。
+其中，每一个车型的不同档次都对应一个 `carIds`，该参数可以通过 getCarIdBySearch 获取。
+
+只要在 `https://dbs.auto.sina.cn/api/auto/getCarIdBySearch`接口配置参数 serialId 为 sub_brand_id 即可。
+
+以 Tesla 的 ModelY （ sub_brand_id = 4281 ）为例，向服务器发送请求 `https://dbs.auto.sina.cn/api/auto/getCarIdBySearch?serialId=4281`，在收到的 response 里即可找到 `"carIds":["59912","59913","59914"]`
 
 于是，流程闭环，大功告成。
 
-
 ## 最后
-折腾了半天，终于把整个流程跑通，复现的Jupyter Notebook 如下。
+复现的Jupyter Notebook 如下。
 
 [下载 sina_all.ipynb](./crawl_auto_sina_sales/sina_all.ipynb)
 
 [下载 sina_e.ipynb](./crawl_auto_sina_sales/sina_e.ipynb)
+
+最后叠一层甲，本文纯属技术分享，切勿用做非法用途。
