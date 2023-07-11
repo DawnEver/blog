@@ -147,3 +147,35 @@ git remote add origin [url]
 
 如果有多个分支，需要通过对每个分支分别设置上游分支
 `git branch --set-upstream-to=origin/branch_name branch_name`
+
+### 怎么在本地分支之间同步部分文件 
+要将本地分支A的更改同步到分支B，可以使用以下步骤：
+
+确保你当前位于分支A上。如果不是，请切换到分支A：
+
+`git checkout A`
+确保分支A的本地更改已经提交并推送到远程仓库。
+
+切换到分支B：
+
+`git checkout B`
+合并分支A到分支B：
+
+`git merge A`
+这将把分支A的更改合并到分支B中。如果存在冲突，你需要解决冲突并提交更改。
+
+推送分支B到远程仓库：
+
+`git push origin B`
+现在，分支B将包含来自分支A的最新更改。
+
+请注意，以上步骤假设你的分支A和分支B都已经与远程仓库进行了关联，并且你有相应的推送权限。如果你的分支B还没有与远程仓库关联，你可以使用以下命令将其推送到远程仓库：
+
+`git push -u origin B`
+这将在推送分支B的同时，将其与远程仓库进行关联，以便今后的推送操作。
+
+如果只是需要同步部分文件，如`a`和`b`：
+```shell
+git checkout B			// 首先切换到 B 分支
+git checkout A a b		// 然后从 A 中抽取 a、b 两个选定的文件
+```
