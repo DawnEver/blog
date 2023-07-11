@@ -65,6 +65,9 @@ OK，都不用上什么 scrapy、selenium了，直接用 requests 库就解决�
 
 无论如何，那就先用 powershell 脚本 把数据都扒下来，再用 python json库处理。
 
+当然，我们可以在 notebook 里的 code 块里以 `!` 开头执行命令行命令。
+
+Window 下默认终端是 cmd ，于是我们调用powershell执行脚本。 `!powershell -ExecutionPolicy Bypass -File $script`
 
 ## 画风突转-2
 
@@ -111,8 +114,8 @@ OK，都不用上什么 scrapy、selenium了，直接用 requests 库就解决�
 ## 最后
 复现的Jupyter Notebook 如下。
 
-[下载 sina_all.ipynb](./crawl_auto_sina_sales/sina_all.ipynb)
+[下载 sina_sales.ipynb](./crawl_auto_sina_sales/sina_sales.ipynb)
 
-[下载 sina_e.ipynb](./crawl_auto_sina_sales/sina_e.ipynb)
+[下载 sina_detail.ipynb](./crawl_auto_sina_sales/sina_detail.ipynb)
 
 最后叠一层甲，本文纯属技术分享，切勿用做非法用途。
