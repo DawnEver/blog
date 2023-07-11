@@ -1,5 +1,5 @@
 ---
-slug: Macos_battery_charge_limit
+slug: macos_battery_charge_limit
 title: 如何优雅地限制 MacOS 电池充电上限
 date: 2023-03-10
 authors: bennett
@@ -56,11 +56,11 @@ exit
 
 〉 smcFanControl lets the user set a minimum speed for built-in fans. It allows you to increase your minimum fan speed to make your Intel Mac run cooler. In order to not damage your machine, smcFanControl does not let you set a minimum speed to a value below Apple's defaults.
 
-![2023-06-04/Macos_battery_charge_limit/1.png](./Macos_battery_charge_limit/1.png)
+![2023-06-04/macos_battery_charge_limit/1.png](./macos_battery_charge_limit/1.png)
 
 尽管 smcFanControl 也只有 2.9 MB，但也留下了碍眼的风扇控制（我才不愿意被创造需求呢doge），很难看。
 
-![2023-06-04/Macos_battery_charge_limit/2.png](./Macos_battery_charge_limit/2.png)
+![2023-06-04/macos_battery_charge_limit/2.png](./macos_battery_charge_limit/2.png)
 
 何不如直接把用到的可执行文件 smc 拎出来？
 

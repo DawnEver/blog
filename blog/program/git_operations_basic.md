@@ -1,5 +1,5 @@
 ---
-slug: Git_operations
+slug: Git_operations_basic
 title: Git基本操作
 date: 2023-05-07
 authors: bennett
