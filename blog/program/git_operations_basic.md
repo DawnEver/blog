@@ -1,6 +1,6 @@
 ---
 slug: Git_operations_basic
-title: Git基本操作
+title: Git基本操作-git hook
 date: 2023-05-07
 authors: bennett
 tags: [program, shell]
