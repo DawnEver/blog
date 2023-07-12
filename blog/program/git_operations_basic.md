@@ -1,6 +1,6 @@
 ---
 slug: Git_operations_basic
-title: Git基本操作
+title: Git基本操作-git hook
 date: 2023-05-07
 authors: bennett
 tags: [program, shell]
@@ -11,24 +11,36 @@ description: 一些git基本操作
 
 <!-- truncate -->
 
-
 ## 开始
+
 这里并不是一个严谨全面的git教程，只是一些经验分享。
 
 1.下载[git](https://git-scm.com/download)
 
 2.配置个人信息
 
-`git config --global user.name  "username"  `
+`git config --global user.name  "username"`
 
 `git config --global user.email  "email"`
 
-只要改一次，引号里的东西不用真实信息，在git log里面显示，让其他人知道是你就行
+这里信息由于使用了`--global`全局参数，所以只要改一次。
+
+注意，引号里的东西可以不采用真实信息。
 
 ## 工作流程
 
-**每次修改前**
-**先把服务器代码拉到本地**
+- fork项目到自己账户
+- 克隆仓库到本地
+- 及时拉取服务器代码更新
+- 本地修改、提交
+- 推送代码到云端
+- 提交 Pull Request 合并代码到源仓库
+
+### 克隆
+
+`git clone [仓库url]`
+
+这里推荐使用ssl链接，速度更快。
 
 ### 拉取
 
@@ -86,11 +98,9 @@ vscode和pycharm都集成了git工具（vscode在左下角，pycharm可以看一
 `git remote add origin xxx` # 添加远程仓库
 `git remote set-url origin xxx` # 设置原程仓库
 
-
 ## 常见问题
 
-
-### ssl报错
+### 1.ssl报错
 
 ```shell
 warning: ----------------- SECURITY WARNING ----------------
@@ -105,50 +115,46 @@ warning: HTTPS connections may not be secure. See https://aka.ms/gcmcore-tlsveri
 git config --global http.sslVerify false
 ```
 
+### 2.切换远程仓库
 
----
-参考阅读
-[CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
-
-
-### 切换远程仓库
 方法1.修改命令
 
 `git remote set-url origin <url>`
 
 方法2.先删后加
 
-```
+```bash
 git remote rm origin
 git remote add origin [url]
 ```
 
 方法3.直接修改config文件
 
-```
+```bash
 #.git/config
 [core]
-	repositoryformatversion = 0
-	filemode = false
-	bare = false
-	logallrefupdates = true
-	symlinks = false
-	ignorecase = true
-	hideDotFiles = dotGitOnly
+ repositoryformatversion = 0
+ filemode = false
+ bare = false
+ logallrefupdates = true
+ symlinks = false
+ ignorecase = true
+ hideDotFiles = dotGitOnly
 [remote "origin"]
-	url = https://github.com/ZhangDi-d/SpringBootSample.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+ url = https://github.com/ZhangDi-d/SpringBootSample.git
+ fetch = +refs/heads/*:refs/remotes/origin/*
 
 ```
 
-原文链接：https://blog.csdn.net/ShelleyLittlehero/article/details/95980669
+原文链接：<https://blog.csdn.net/ShelleyLittlehero/article/details/95980669>
 
-**注意** 
+**注意**
 
 如果有多个分支，需要通过对每个分支分别设置上游分支
 `git branch --set-upstream-to=origin/branch_name branch_name`
 
-### 怎么在本地分支之间同步部分文件 
+### 3.怎么在本地分支之间同步部分文件
+
 要将本地分支A的更改同步到分支B，可以使用以下步骤：
 
 确保你当前位于分支A上。如果不是，请切换到分支A：
@@ -175,7 +181,57 @@ git remote add origin [url]
 这将在推送分支B的同时，将其与远程仓库进行关联，以便今后的推送操作。
 
 如果只是需要同步部分文件，如`a`和`b`：
+
 ```shell
-git checkout B			// 首先切换到 B 分支
-git checkout A a b		// 然后从 A 中抽取 a、b 两个选定的文件
+git checkout B   // 首先切换到 B 分支
+git checkout A a b  // 然后从 A 中抽取 a、b 两个选定的文件
 ```
+
+### 4.git pull 报警告怎么办？
+
+在使用`git pull`合并时候，有时会有如下警告（有可能是中文版）：
+
+```shell
+int: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+若无特殊需求或不想深究，执行：`git config --global pull.rebase false`。
+
+然后，我们就要开始深究了。
+
+首先，`git pull` 等价于`git fetch && git merge`
+
+但是，`git pull`有一些常见的选项搭配：
+
+- 不带任何选项的`git pull`命令：先尝试快进合并，如果不行再进行正常合并生成一个新的提交。
+- `git pull --rebase`命令：先尝试快进合并，如果不行再进行变基合并。
+- `git pull --ff-only`命令：只尝试快进合并，如果不行则终止当前合并操作。
+- `git pull --no-ff`命令：禁止快进合并，即不管能不能快进合并，最后都会进行正常合并生成一个新的提交。
+
+关于变基和快进合并，详见官方文档：[3.6 Git 分支 - 变基](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA#_rebasing)
+
+注意，只对尚未推送或分享给别人的本地修改执行变基操作清理历史， 不对已推送至别处的提交执行变基操作，这样，你才能享受到两种方式（变基 、 合并）带来的便利。
+
+这里引用Git Book的“金科玉律”（The Perils of Rebasing）：
+
+> Ahh, but the bliss of rebasing isn’t without its drawbacks, which can be summed up in a single line:
+> Do not rebase commits that exist outside your repository and that people may have based work on.
+> If you follow that guideline, you’ll be fine. If you don’t, people will hate you, and you’ll be scorned by friends and family.
+
+---
+
+参考阅读
+
+- [CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
+- [Git官方文档](https://git-scm.com/doc)
