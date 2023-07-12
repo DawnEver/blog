@@ -23,12 +23,23 @@ description: 一些git基本操作
 
 `git config --global user.email  "email"`
 
-只要改一次，引号里的东西不用真实信息，在git log里面显示，让其他人知道是你就行
+这里信息由于使用了`--global`全局参数，所以只要改一次。
+
+注意，引号里的东西可以不采用真实信息。
 
 ## 工作流程
+- fork项目到自己账户
+- 克隆仓库到本地
+- 及时拉取服务器代码更新
+- 本地修改、提交
+- 推送代码到云端
+- 提交 Pull Request 合并代码到源仓库
 
-**每次修改前**
-**先把服务器代码拉到本地**
+### 克隆
+
+`git clone [仓库url]`
+
+这里推荐使用ssl链接，速度更快。
 
 ### 拉取
 
@@ -90,7 +101,7 @@ vscode和pycharm都集成了git工具（vscode在左下角，pycharm可以看一
 ## 常见问题
 
 
-### ssl报错
+### 1.ssl报错
 
 ```shell
 warning: ----------------- SECURITY WARNING ----------------
@@ -106,12 +117,7 @@ git config --global http.sslVerify false
 ```
 
 
----
-参考阅读
-[CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
-
-
-### 切换远程仓库
+### 2.切换远程仓库
 方法1.修改命令
 
 `git remote set-url origin <url>`
@@ -148,7 +154,7 @@ git remote add origin [url]
 如果有多个分支，需要通过对每个分支分别设置上游分支
 `git branch --set-upstream-to=origin/branch_name branch_name`
 
-### 怎么在本地分支之间同步部分文件 
+### 3.怎么在本地分支之间同步部分文件 
 要将本地分支A的更改同步到分支B，可以使用以下步骤：
 
 确保你当前位于分支A上。如果不是，请切换到分支A：
@@ -179,3 +185,47 @@ git remote add origin [url]
 git checkout B			// 首先切换到 B 分支
 git checkout A a b		// 然后从 A 中抽取 a、b 两个选定的文件
 ```
+
+
+### 4.git pull 报警告怎么办？
+
+在使用`git pull`合并时候，有时会有如下警告（有可能是中文版）：
+
+```
+int: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+```
+
+若无特殊需求或不想深究，执行：`git config --global pull.rebase false`。
+
+
+然后，我们就要开始深究了。
+
+
+首先，`git pull` 等价于`git fetch && git merge`
+
+但是，`git pull`有一些常见的选项搭配：
+
+- 不带任何选项的`git pull`命令：先尝试快进合并，如果不行再进行正常合并生成一个新的提交。
+- `git pull --rebase`命令：先尝试快进合并，如果不行再进行变基合并。
+- `git pull --ff-only`命令：只尝试快进合并，如果不行则终止当前合并操作。
+- `git pull --no-ff`命令：禁止快进合并，即不管能不能快进合并，最后都会进行正常合并生成一个新的提交。
+
+
+
+
+
+---
+
+参考阅读
+[CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
