@@ -14,6 +14,8 @@ jobs:
 
       - name: Merge dev to main
         run: |
-          git switch main
+          git checkout dev
+          git checkout main
+          git pull
           git merge dev --no-ff --no-edit
           git push origin main
