@@ -10,10 +10,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Merge dev to main
         run: |
+          git checkout dev
           git checkout main
+          git pull
           git merge dev --no-ff --no-edit
           git push origin main
