@@ -1,6 +1,10 @@
 name: Merge dev to main
 
 on:
+  push:
+    branches:
+      - main
+      
   schedule:
     - cron: "0 0 * * *"
 
@@ -14,8 +18,9 @@ jobs:
 
       - name: Merge dev to main
         run: |
-          git checkout dev
-          git checkout main
-          git pull
-          git merge dev --no-ff --no-edit
+          git config --global user.name 'AutoMerge'
+          git config --global user.email 'AutoMerge@github.com'
+          git pull --unshallow
+          git checkout -b main origin/main
+          git merge --no-edit origin/dev
           git push origin main
