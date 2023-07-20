@@ -3,20 +3,20 @@ slug: crawl_auto_sina_sales.md
 title: 如何爬取新浪汽车的历史销售数据
 date: 2023-7-7
 authors: bennett
-tags: [program, spider, window]
+tags: [program, spider, window, Intern]
 keywords: [curl, window, powershell]
 description: 在Window平台下，使用curl+python爬取新浪汽车的历史销售数据
 # image: /img/project/kz-admin.png
 ---
 <!-- truncate -->
 
-Bosch实习时，收到一条来自 Mentor 的支线任务————爬取新浪汽车的历史销售数据。
+暑期实习的一项支线任务————爬取新浪汽车的历史销售数据。
 
 由于公司数据安全，本文纯属居家复现。用以分享爬取思路。
 
 ## 开始
 
-众所周知，公司的电脑有严格的软件准入制度，想安装一个软件巨麻烦。所幸系统预装了 Anaonda，打开 Jupyter Lab，就是我熟悉的环境。
+公司的电脑有严格的软件准入制度，想安装一个软件巨麻烦。所幸系统预装了 Anaonda，打开 Jupyter Lab，就是我熟悉的环境。
 
 接下来是打开浏览器，找到[新浪汽车销量排行榜](https://auto.sina.com.cn/zhishu/#sr_0)。
 

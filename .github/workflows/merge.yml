@@ -18,10 +18,8 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
       - name: Merge dev to main
         run: |
-          git config --global user.name 'AutoMerge'
-          git config --global user.email 'AutoMerge@github.com'
-          git pull --unshallow
+          git checkout dev
           git checkout main
-          # git merge --no-edit origin/dev
-          git merge --strategy-option=theirs origin/dev
-          git push -f origin main
+          git pull
+          git merge dev --no-ff --no-edit
+          git push origin main
