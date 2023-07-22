@@ -62,6 +62,11 @@ html[data-theme='dark'] .bloghome__intro > p {
   height: auto;
 }
 
+.bloghome__image img {
+  width: 100%;
+  height: auto;
+}
+
 :global(.hero_main_svg__js) g,
 :global(.hero_main_svg__todo) path:nth-child(1),
 :global(.hero_main_svg__magnifier) path:nth-child(1) {
@@ -241,6 +246,11 @@ html[data-theme='dark'] .bloghome__intro > p {
     width: 90%;
     height: auto;
   }
+
+  .bloghome__image img {
+    width: 90%;
+    height: auto;
+  }
 }
 
 @media (max-width: 570px) {
@@ -253,6 +263,12 @@ html[data-theme='dark'] .bloghome__intro > p {
   }
 
   .bloghome__image svg {
+    width: 100%;
+    height: auto;
+    padding-left: 12px;
+  }
+
+  .bloghome__image img {
     width: 100%;
     height: auto;
     padding-left: 12px;

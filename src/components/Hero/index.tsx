@@ -14,6 +14,7 @@ import { Icon } from '@iconify/react'
 
 import styles from './styles.module.scss'
 
+
 function Hero() {
   const trails = useTrail(4, {
     from: { opacity: 0, transform: 'translate3d(0px, 2em, 0px)' },
@@ -47,9 +48,11 @@ function Hero() {
           </a>
         </animated.div>
       </div>
-      {/* <div className={styles.bloghome__image}>
-        <HeroMain />
-      </div> */}
+
+      <div className={styles.bloghome__image}>
+        {/* <HeroMain /> */}
+      </div>
+      
     </animated.div>
   )
 }
