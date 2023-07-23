@@ -1,6 +1,6 @@
 ---
 slug: Git_operations_basic
-title: Git基本操作-基础篇
+title: Git 基本操作-基础篇
 date: 2023-05-07
 authors: bennett
 tags: [program, shell]

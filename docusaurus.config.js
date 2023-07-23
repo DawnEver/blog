@@ -255,7 +255,8 @@ const config = {
     path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
     path.resolve(__dirname, './src/plugin/plugin-baidu-push'), 
     path.resolve(__dirname, './src/plugin/plugin-dynamic-title'), 
-    path.resolve(__dirname, './src/plugin/plugin-live2d'), 
+    // path.resolve(__dirname, './src/plugin/plugin-live2d'), 
+    // path.resolve(__dirname, './src/plugin/plugin-mousemove-contaner'), 
     [
       path.resolve(__dirname, './src/plugin/plugin-content-blog'),
       {
