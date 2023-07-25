@@ -67,16 +67,20 @@ const config = {
           position: 'right',
           items: [
             {
-              label: 'Hi-Motor Bot',
-              to: 'https://bot.hi-motor.site',
-            },
-            {
               label: 'ChatGPT',
               to: 'https://chat.hi-motor.site',
             },
             {
+              label: 'Team Overleaf',
+              to: 'https://overleaf.hi-motor.site',
+            },          
+            {
               label: 'Team Gitea',
               to: 'https://gitea.hi-motor.site',
+            },
+            {
+              label: 'Hi-Motor Bot',
+              to: 'https://bot.hi-motor.site',
             },
           ],
         },
