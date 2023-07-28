@@ -231,7 +231,8 @@ hint: invocation.
 
 ---
 
-参考阅读
+参考阅读、观看
 
 - [CS自学指南git](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/)
 - [Git官方文档](https://git-scm.com/doc)
+- [bilibili-码农高天-十分钟学会正确的github工作流，和开源作者们使用同一套流程](https://www.bilibili.com/video/BV19e4y1q7JJ)
