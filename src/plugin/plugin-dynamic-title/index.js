@@ -10,10 +10,10 @@ module.exports = function (context, options) {
             var OriginTitile = document.title,titleTime;
             document.addEventListener("visibilitychange",function(){if(document.hidden)
             {    
-                document.title ="糟糕,网页已崩溃! っ °Д °;)っ";
+                document.title ="糟糕,网页已崩溃! っ °Д °;)っ | Bennett的小站";
                 clearTimeout(titleTime)
             }else{
-                document.title ="(/≧▽≦/)嘻嘻，骗你的！";
+                document.title ="(/≧▽≦/)嘻嘻，骗你的！ | Bennett的小站";
                 titleTime =setTimeout(
                   function(){
                     document.title = OriginTitile
