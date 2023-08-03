@@ -72,7 +72,7 @@ const config = {
             },
             {
               label: 'Team Overleaf',
-              to: 'https://overleaf.hi-motor.site',
+              to: 'http://overleaf.hi-motor.site',
             },          
             {
               label: 'Team Gitea',
