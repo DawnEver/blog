@@ -67,8 +67,20 @@ const config = {
           position: 'right',
           items: [
             {
+              label: 'Hi-Motor Home',
+              to: 'https://www.hi-motor.site',
+            },
+            {
+              label: 'Hi-Motor Hub',
+              to: 'https://hub.hi-motor.site',
+            },
+            {
               label: 'ChatGPT',
               to: 'https://chat.hi-motor.site',
+            },
+            {
+              label: 'Bezier Curve Playground',
+              to: 'https://bezier.hi-motor.site',
             },
             {
               label: 'Team Overleaf',
@@ -226,6 +238,34 @@ const config = {
       attributes: {
         name: 'description',
         content: 'Bennett的个人博客',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:title',
+        content: 'Bennett的个人博客',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'video.movie',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:url',
+        content: 'https://bmy.asia',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image',
+        content: 'https://bmy.asia/img/logo.png',
       },
     },
   ],
