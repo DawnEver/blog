@@ -79,8 +79,8 @@ const config = {
               to: 'https://chat.hi-motor.site',
             },
             {
-              label: 'Bezier Curve Playground',
-              to: 'https://bezier.hi-motor.site',
+              label: 'Barrier End Playground',
+              to: 'https://barrier-end.hi-motor.site',
             },
             {
               label: 'Team Overleaf',
