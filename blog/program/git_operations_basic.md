@@ -70,6 +70,8 @@ description: 一些git基本操作
 
 `git reset [hash]` #回到之前某个版本，[hash]是之前版本的hash值，可以在git log里查看
 
+`git reset HEAD^` 回到一个版本以前 `git reset HEAD^n` 回到n个版本以前
+
 `git checkout .` # 清除工作区文件
 
 ### 推送
@@ -228,6 +230,7 @@ hint: invocation.
 > Ahh, but the bliss of rebasing isn’t without its drawbacks, which can be summed up in a single line:
 > Do not rebase commits that exist outside your repository and that people may have based work on.
 > If you follow that guideline, you’ll be fine. If you don’t, people will hate you, and you’ll be scorned by friends and family.
+
 
 ---
 
