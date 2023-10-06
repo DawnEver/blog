@@ -9,8 +9,13 @@ description: 那些退休但不忍丢弃的代码- Python
 # image: /img/project/kz-admin.png
 ---
 <!-- truncate -->
+# Content
+- [Run All Tests](#run-all-tests)
+- [Excel to Dataframe](#excel-to-dataframe)
+- [Resolve ModuleNotFoundError](#resolve-modulenotfounderror)
 
-
+## Run All Tests
+Take folder *hi-motor-designer* as example, below codes will add *hi-motor-designer* to python system path.
 
 ```python
 # test_all.py
@@ -34,6 +39,7 @@ if __name__ == "__main__":
     test_demo()
 ```
 
+## Excel to Dataframe
 ```python
 import csv
 import pandas as pd
@@ -77,4 +83,17 @@ for sheet_name in []:
                     df_temp[index_names[4]],
                     df_temp[index_names[5]])
             mywriter.writerows(res)
+```
+
+## Resolve ModuleNotFoundError
+```python
+try:
+    import PyQt5
+except ModuleNotFoundError:
+    os.system("pip install PyQt5")
+    from PyQt5.Qt import *
+else:
+    from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLineEdit, QFrame, QMessageBox, QComboBox
+    from PyQt5.QtGui import QIcon, QFont
+    from PyQt5.QtCore import Qt
 ```

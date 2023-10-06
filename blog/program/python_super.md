@@ -8,6 +8,7 @@ keywords: [python, super()]
 description: Use super() to Call func() of Its Parent Class
 # image: /img/project/kz-admin.png
 ---
+<!-- truncate -->
 
 
 As is shown below, I wanted to call __init__() of A,B and C, but found `super(A,self).__init__()` calling `B.__init__()` and `super(C,self).__init__()` calling built-in `__init__()`.

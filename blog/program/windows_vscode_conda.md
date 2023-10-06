@@ -27,3 +27,8 @@ vscode 选择 select python interpretor
 
 可能需要 vscode 管理员权限
 
+## 常用脚本
+下载 requirements.txt 中的内容
+```sh
+while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
+```
