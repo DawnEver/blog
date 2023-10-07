@@ -3,8 +3,8 @@ slug: emotions
 title: 颜文字表情(收藏向)
 date: 2023-10-07
 authors: bennett
-tags: []
-keywords: []
+tags: [emotions]
+keywords: [emotions]
 description: 颜文字表情
 ---
 
