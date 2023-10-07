@@ -7,6 +7,7 @@ tags: [emotions]
 keywords: [emotions]
 description: 颜文字表情
 ---
+<!-- truncate -->
 
 # Emoticons
 |･ω･｀)

@@ -8,6 +8,7 @@ keywords: [shell, command lines]
 description: 一些常用的命令行脚本
 # image: /img/project/kz-admin.png
 ---
+<!-- truncate -->
 
 # 目录
 - [Universal](#Universal)

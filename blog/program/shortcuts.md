@@ -8,6 +8,7 @@ keywords: [shell, Command lines]
 description: 一些常用的快捷键工具
 # image: /img/project/kz-admin.png
 ---
+<!-- truncate -->
 
 # 目录
 - [Universal](#Universal)
