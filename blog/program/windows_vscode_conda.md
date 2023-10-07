@@ -12,7 +12,9 @@ description: 在 Windows 下，如何为你的 VSCode 配置 conda 环境，踩�
 
 ## 安装 Conda
 
-推荐采用简洁而同样强大的 MiniConda(https://docs.conda.io/projects/miniconda)：只是比Anaconda少了一些预装的模块.
+推荐采用简洁而同样强大的 MiniConda(https://docs.conda.io/projects/miniconda)
+
+只是比Anaconda少了一些预装的模块.
 
 > Miniconda is a free minimal installer for conda. It is a small bootstrap version of Anaconda that includes only conda, Python, the packages they both depend on, and a small number of other useful packages (like pip, zlib, and a few others). 
 
