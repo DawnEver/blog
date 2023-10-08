@@ -7,6 +7,7 @@ tags: [program, web]
 keywords: [web]
 description: 全栈前端开发
 ---
+<!-- truncate -->
 
 # 全栈前端开发
 
