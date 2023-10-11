@@ -13,6 +13,7 @@ description: 那些退休但不忍丢弃的代码- Python
 - [Run All Tests](#run-all-tests)
 - [Excel to Dataframe](#excel-to-dataframe)
 - [Resolve ModuleNotFoundError](#resolve-modulenotfounderror)
+- [Import all *.py files as module](#import-all-*.py-files-as-module)
 
 ## Run All Tests
 Take folder *hi-motor-designer* as example, below codes will add *hi-motor-designer* to python system path.
@@ -96,4 +97,19 @@ else:
     from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLineEdit, QFrame, QMessageBox, QComboBox
     from PyQt5.QtGui import QIcon, QFont
     from PyQt5.QtCore import Qt
+```
+
+
+## Import all *.py files as module
+```python
+# __init__.py
+import os
+
+__all__=[]
+dir=os.path.split(os.path.realpath(__file__))[0]
+for file in os.listdir(dir):
+    if file.endswith(".py"):
+        if file=="__init__.py":
+            continue
+        __all__.append(file[:-3])
 ```
