@@ -231,6 +231,24 @@ hint: invocation.
 > Do not rebase commits that exist outside your repository and that people may have based work on.
 > If you follow that guideline, you’ll be fine. If you don’t, people will hate you, and you’ll be scorned by friends and family.
 
+### 5 报错 You have not concluded your merge (MERGE_HEAD exists)
+导致报错:error: You have not concluded your merge (MERGE_HEAD exists).的原因可能是在以前pull下来的代码自动合并失败。
+
+- 解决方案一：保留本地的更改，中止合并->重新合并->重新拉取
+```sh
+git merge --abort
+git reset --merge
+git pull
+```
+git pull之后然后重新解决冲突，再push，（记得需要稍微跟自己push的要有一点区别，要不然又会造成这样的情况）
+
+- 解决方案二：舍弃本地代码，远端版本覆盖本地版本（慎重）
+
+```sh
+git fetch --all
+git reset --hard origin/master
+git fetch
+```
 
 ---
 
