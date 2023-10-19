@@ -9,3 +9,7 @@ description: 资源收藏贴
 # image: /img/project/kz-admin.png
 ---
 <!-- truncate -->
+
+## 排版
+- [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
+- [LCTT 中文文案排版指北](https://lctt.github.io/wiki/tutorials/copywriting.html)
