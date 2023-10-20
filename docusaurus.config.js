@@ -69,28 +69,25 @@ const config = {
             {
               label: 'Hi-Motor Home',
               to: 'https://www.hi-motor.site',
-            },
-            {
+            },{
               label: 'Hi-Motor Hub',
               to: 'https://hub.hi-motor.site',
-            },
-            {
-              label: 'ChatGPT',
-              to: 'https://chat.hi-motor.site',
-            },
-            {
-              label: 'Barrier End Playground',
-              to: 'https://barrier-end.hi-motor.site',
-            },
-            {
-              label: 'Team Overleaf',
-              to: 'http://overleaf.hi-motor.site',
-            },          
-            {
+            },{
               label: 'Team Gitea',
               to: 'https://gitea.hi-motor.site',
-            },
-            {
+            },{
+              label: 'Team ChatGPT',
+              to: 'https://chat.hi-motor.site',
+            },{
+              label: 'Team Excalidraws',
+              to: 'https://excalidraw.hi-motor.site',
+            },{
+              label: 'Barrier End Playground',
+              to: 'https://barrier-end.hi-motor.site',
+            },{
+              label: 'Motor DXF Visualization',
+              to: 'https://dxf.hi-motor.site',
+            },{
               label: 'Hi-Motor Bot',
               to: 'https://bot.hi-motor.site',
             },
