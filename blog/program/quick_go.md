@@ -1,11 +1,11 @@
 ---
 slug: quick_go
-title: Quick Go：Go 语言特种兵式入门
+title: Quick Go：特种兵式入门Go 语言
 date: 2023-10-21
 authors: bennett
 tags: [program, go, mongodb]
 keywords: [go, https]
-description: Quick Go：Go 语言特种兵式入门
+description: Quick Go：特种兵式入门Go 语言
 # image: /img/project/kz-admin.png
 ---
 <!-- truncate -->
