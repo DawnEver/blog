@@ -13,3 +13,6 @@ description: 资源收藏贴
 ## 排版
 - [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
 - [LCTT 中文文案排版指北](https://lctt.github.io/wiki/tutorials/copywriting.html)
+
+## 计算几何
+[clipperlib: Polygon Clipping and Offsetting](https://github.com/AngusJohnson/Clipper2)

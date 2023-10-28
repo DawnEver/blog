@@ -1,11 +1,11 @@
 ---
 slug: quick_go
-title: Quick Go：Go 语言特种兵式入门
+title: Quick Go：特种兵式入门Go 语言
 date: 2023-10-21
 authors: bennett
 tags: [program, go, mongodb]
 keywords: [go, https]
-description: Quick Go：Go 语言特种兵式入门
+description: Quick Go：特种兵式入门Go 语言
 # image: /img/project/kz-admin.png
 ---
 <!-- truncate -->
@@ -53,7 +53,7 @@ func main() {
 - [如何制作和使用自签名证书](https://zhuanlan.zhihu.com/p/349646806)
 
 ## ...
-花了大半天时间写并调试完了 api，整体体验下来 Go 是相当优雅。我很愿意在之后的工作中尝试 Go。
+花了大半天时间写并调试完了 api，整体体验下来 Go 是相当优雅，是一款相当适合强迫症选手的语言。我很愿意在之后的工作中尝试 Go。
 
 ## 部分参考
 - [Effectove Go](https://golang.google.cn/doc/effective_go)
