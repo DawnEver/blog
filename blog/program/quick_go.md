@@ -59,3 +59,5 @@ func main() {
 - [Effectove Go](https://golang.google.cn/doc/effective_go)
 - [深入学习用 Go 编写 HTTP 服务器](https://blog.csdn.net/kevin_tech/article/details/104100835)
 - [用go搭建高效rest api服务（使用postgresql，redis，gin，gorm...）](https://zhuanlan.zhihu.com/p/299585136)
+- [用 Golang 实现百万级 Websocket 服务](https://learnku.com/articles/23560/using-golang-to-achieve-million-level-websocket-service)
+- [慢聊Go之GoLang中使用Gorilla Websocket｜Go主题月](https://juejin.cn/post/6946952376825675812)

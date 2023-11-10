@@ -45,7 +45,17 @@ description: 一些常用的命令行脚本
     ```
 
 ## ffmpeg
-...
+
+```shell
+# 视频两倍速
+ffmpeg -i test.mp4 -filter:v "setpts=0.5*PTS" out.mp4
+
+# 音频两倍速
+ffmpeg -i test.mp4 -filter:a  "atempo=2.0" -vn out.mp4
+# 都两倍速
+ffmpeg -i test.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" out.mp4
+```
+
 
 # MacOS
 
