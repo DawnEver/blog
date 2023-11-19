@@ -10,8 +10,12 @@ description: 资源收藏贴
 ---
 <!-- truncate -->
 
+## optimization
+- [Bayesian optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/)
+
 ## Control System
 - [当我们谈“最小相位系统”时究竟在谈什么？](https://zhuanlan.zhihu.com/p/108053853)
+
 ## 排版
 - [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
 - [LCTT 中文文案排版指北](https://lctt.github.io/wiki/tutorials/copywriting.html)
