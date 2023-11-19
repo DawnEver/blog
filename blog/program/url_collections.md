@@ -12,7 +12,7 @@ description: 资源收藏贴
 
 ## optimization
 - [Bayesian optimization with scikit-learn](https://thuijskens.github.io/2016/12/29/bayesian-optimisation/)
-
+- [zhihu为什么基于贝叶斯优化的自动调参没有大范围使用？](https://www.zhihu.com/question/33711002)
 ## Control System
 - [当我们谈“最小相位系统”时究竟在谈什么？](https://zhuanlan.zhihu.com/p/108053853)
 
