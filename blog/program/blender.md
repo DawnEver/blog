@@ -1,6 +1,6 @@
 ---
 slug: blender
-title: 如何爬取新浪汽车的历史销售数据
+title: Blender
 date: 2023-11-10
 authors: bennett
 tags: [program, blender]
