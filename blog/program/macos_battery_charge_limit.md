@@ -2,7 +2,7 @@
 slug: macos_battery_charge_limit
 title: 如何优雅地限制 MacOS 电池充电上限
 date: 2023-03-10
-authors: bennett
+authors: benjamin
 tags: [program, mac, shell]
 keywords: [battery, mac, shell]
 description: 基于 smcFanControl，简单的

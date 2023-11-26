@@ -2,7 +2,7 @@
 slug: windows_vscode_conda
 title: 在 Windows 下，如何为你的 VSCode 配置 conda 环境
 date: 2023-09-27
-authors: bennett
+authors: benjamin
 tags: [vscode, windows, python]
 keywords: [miniconda]
 description: 在 Windows 下，如何为你的 VSCode 配置 conda 环境，踩坑

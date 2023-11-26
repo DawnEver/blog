@@ -2,7 +2,7 @@
 slug: command-line-scripts
 title: 一些常用的命令行脚本(收藏向)
 date: 2023-10-07
-authors: bennett
+authors: benjamin
 tags: [linux, shell]
 keywords: [shell, command lines]
 description: 一些常用的命令行脚本

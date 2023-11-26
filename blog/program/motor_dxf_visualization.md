@@ -2,7 +2,7 @@
 slug: motor_dxf_visualization
 title: 当电机模型不只是一张图纸
 date: 2023-10-19
-authors: bennett
+authors: benjamin
 tags: [program, javascript, motor]
 keywords: [motor, dxf]
 description: Motor model visualization based on threejs and dxf

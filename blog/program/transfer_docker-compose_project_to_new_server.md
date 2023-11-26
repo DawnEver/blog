@@ -2,7 +2,7 @@
 slug: transfer_docker-compose_project_to_new_server
 title: 如何迁移 docker compose 项目到一台新的服务器
 date: 2023-06-29
-authors: bennett
+authors: benjamin
 tags: [linux, docker-compose, gitea]
 keywords: [docker-compose, gitea, tar, tldr]
 description: 迁移 docker compose 项目到一台新的服务器

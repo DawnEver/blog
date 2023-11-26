@@ -1,6 +1,6 @@
 export const Friends: Friend[] = [
   {
-    title: 'Bennett',
+    title: 'Benjamin',
     description: '我',
     website: 'https://bmy.asia/',
     avatar: '/img/icons/icon-color.svg',

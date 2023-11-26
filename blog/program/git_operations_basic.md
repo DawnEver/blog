@@ -2,7 +2,7 @@
 slug: Git_operations_basic
 title: Git 基本操作-基础篇
 date: 2023-05-07
-authors: bennett
+authors: benjamin
 tags: [program, shell]
 keywords: [shell, git]
 description: 一些git基本操作

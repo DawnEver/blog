@@ -2,7 +2,7 @@
 slug: diy_udps_in_ansys_maxwell
 title: 如何为 Ansys Maxwell 编写 UDPs(User Defined Primitives)
 date: 2023-07-18
-authors: bennett
+authors: benjamin
 tags: [program, python, Maxwell, Intern]
 keywords: [Maxwell, Motor, UDPs ]
 description: 使用 Python 语言为 Ansys Maxwell 编写 UDPs(User Defined Primitives)

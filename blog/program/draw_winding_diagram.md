@@ -2,7 +2,7 @@
 slug: How-to-draw-winding-connection-diagram-1
 title: 如何用Python绘制绕组连接图-上
 date: 2023-05-06
-authors: bennett
+authors: benjamin
 tags: [program, python, motor-design, winding]
 keywords: [python, motor-design, winding]
 description: 使用 Python 开发的绕组连接图绘制模块
