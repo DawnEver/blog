@@ -2,7 +2,7 @@
 slug: retired_code_python
 title: 那些退休但不忍丢弃的代码- Python
 date: 2023-08-12
-authors: bennett
+authors: benjamin
 tags: [retired_code, python]
 keywords: [python]
 description: 那些退休但不忍丢弃的代码- Python

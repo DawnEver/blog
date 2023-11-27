@@ -2,7 +2,7 @@
 slug: slides_on_your_browser
 title: 如何在浏览器上展示ppt
 date: 2023-09-22
-authors: bennett
+authors: benjamin
 tags: [reveal.js, markdown]
 keywords: [slides]
 description: 基于 revealjs-md 和 protocol handler 搭建 slides 工作流。

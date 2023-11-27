@@ -2,7 +2,7 @@
 slug: shortcuts
 title: 一些常用的快捷键(收藏向)
 date: 2023-10-07
-authors: bennett
+authors: benjamin
 tags: [linux, shortcuts]
 keywords: [shell, Command lines]
 description: 一些常用的快捷键工具

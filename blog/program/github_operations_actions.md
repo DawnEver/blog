@@ -2,7 +2,7 @@
 slug: github_operations_actions
 title: Github 基本操作-Actions
 date: 2023-7-7
-authors: bennett
+authors: benjamin
 tags: [program, Github, CI/CD]
 keywords: [Actions, yaml]
 description: 一些 github actions 操作

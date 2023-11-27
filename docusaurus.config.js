@@ -5,13 +5,13 @@ const announcementBarContent = ''
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Bennett的小站',
+  title: 'Benjamin',
   titleDelimiter: '-',
   url: 'https://bmy.asia',
   baseUrl: '/',
   // favicon: 'img/favicon.ico',
   favicon: 'img/icon/icon-color.svg',
-  organizationName: 'bennett',
+  organizationName: 'benjamin',
   projectName: 'blog',
   tagline: '是如盛夏一般热烈的火焰，燃起了蒲公英的花海……',
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -24,7 +24,7 @@ const config = {
     metadata: [
       {
         name: 'keywords',
-        content: 'Bennett',
+        content: 'Benjamin',
       },
       {
         name: 'keywords',
@@ -36,9 +36,9 @@ const config = {
       },
     ],
     navbar: {
-      title: 'Bennett',
+      title: 'Benjamin',
       logo: {
-        alt: 'Bennett',
+        alt: 'Benjamin',
         src: 'img/logo.webp',
         srcDark: 'img/logo.webp',
       },
@@ -169,8 +169,8 @@ const config = {
           ],
         },  
       ],
-      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
-      // copyright: `<p>Copyright © 2023 - PRESENT Bennett Built with Docusaurus.</p>`,
+      copyright: `<p><a href="http://beian.miit.gov.cn/" >${beian}</a></p><p>Copyright © 2023 - PRESENT Benjamin Built with Docusaurus.</p>`,
+      // copyright: `<p>Copyright © 2023 - PRESENT Benjamin Built with Docusaurus.</p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -196,7 +196,7 @@ const config = {
     algolia: {
       appId: 'GV6YN1ODMO',
       apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'bennett',
+      indexName: 'benjamin',
     },
     zoom: {
       selector: '.markdown :not(em) > img',
@@ -207,7 +207,7 @@ const config = {
       config: {},
     },
     matomo: {
-      matomoUrl: 'https://matomo.bennett.cn/',
+      matomoUrl: 'https://matomo.benjamin.cn/',
       siteId: '1',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
@@ -315,8 +315,8 @@ const config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: 'Bennett',
-          copyright: `Copyright © ${new Date().getFullYear()} Bennett Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'Benjamin',
+          copyright: `Copyright © ${new Date().getFullYear()} Benjamin Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       },
     ],

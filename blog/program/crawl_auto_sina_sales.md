@@ -2,7 +2,7 @@
 slug: crawl_auto_sina_sales
 title: 如何爬取新浪汽车的历史销售数据
 date: 2023-7-7
-authors: bennett
+authors: benjamin
 tags: [program, spider, window, Intern]
 keywords: [curl, window, powershell]
 description: 在Window平台下，使用curl+python爬取新浪汽车的历史销售数据

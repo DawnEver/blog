@@ -2,7 +2,7 @@
 slug: vscode_ssh_virtural_window
 title: VSCode + ssh--在 Mac 下获得丝滑的 Window 开发体验
 date: 2023-10-07
-authors: bennett
+authors: benjamin
 tags: [vscode, ssh]
 keywords: [vscode, ssh]
 description: VSCode + ssh--在 Mac 下获得丝滑的 Window 开发体验

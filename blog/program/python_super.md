@@ -2,7 +2,7 @@
 slug: python_super
 title: Use super() to Call func() of Its Parent Class
 date: 2023-09-28
-authors: bennett
+authors: benjamin
 tags: [program, python, class]
 keywords: [python, super()]
 description: Use super() to Call func() of Its Parent Class

@@ -2,7 +2,7 @@
 slug: full-stack-web-develop
 title: 全栈前端开发
 date: 2022-12-20
-authors: bennett
+authors: benjamin
 tags: [program, web]
 keywords: [web]
 description: 全栈前端开发

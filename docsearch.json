@@ -1,5 +1,5 @@
 {
-  "index_name": "bennett",
+  "index_name": "benjamin",
   "start_urls": ["https://bmy.asia/"],
   "sitemap_urls": ["https://bmy.asia/sitemap.xml"],
   "selectors": {

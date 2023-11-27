@@ -2,7 +2,7 @@
 slug: blender
 title: Blender
 date: 2023-11-10
-authors: bennett
+authors: benjamin
 tags: [program, blender]
 keywords: [blender]
 description: blender

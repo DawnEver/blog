@@ -2,7 +2,7 @@
 slug: cython_pyinstaller_project
 title: 如何使用 Cython + PyInstaller 编译大型项目
 date: 2023-10-11
-authors: bennett
+authors: benjamin
 tags: [program, python, cython]
 keywords: [cython, pyinstaller]
 description: 使用 Cython 和 PyInstaller 编译一个大型项目
