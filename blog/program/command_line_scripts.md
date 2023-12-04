@@ -54,6 +54,12 @@ ffmpeg -i test.mp4 -filter:v "setpts=0.5*PTS" out.mp4
 ffmpeg -i test.mp4 -filter:a  "atempo=2.0" -vn out.mp4
 # 都两倍速
 ffmpeg -i test.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" out.mp4
+
+# 生成gif动图
+ffmpeg -i input.mp4 -vf "scale=1080:-1" -r 15 output.gif
+# -r 帧率
+# -vf 画幅
+
 ```
 
 
