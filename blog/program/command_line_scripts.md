@@ -76,6 +76,20 @@ ffmpeg -i input.mp4 -vf "scale=1080:-1" -r 15 output.gif
     sudo xattr -r -d com.apple.quarantine xxx.dmg
     ```
 # Linux
+## Compress
+```sh
+# 压缩
+tar -czvf archive.tar.gz folder_name
+# 解压缩
+## 解压缩.tar.gz或.tgz文件：
+tar -xzvf archive.tar.gz
+```
+- -c表示创建新的归档文件。
+- -x表示提取文件
+- -v表示显示详细输出
+- -f表示指定文件名
+- -z表示使用gzip进行解压缩
+
 ## Add User
 Take user **git** as example:
 ```sh
